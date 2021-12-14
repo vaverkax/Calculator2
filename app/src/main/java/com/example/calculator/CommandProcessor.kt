@@ -48,6 +48,22 @@ class CommandProcessor {
     fun startProcessing(numberList: List<BigDecimal?>?, operationsList: List<String>): CommandResult {
         when (Validator().isNumbersContainNull(numberList)) {
             true ->  {
+                val mutableListNumber = numberList?.toMutableList()
+                val operationMutableList = operationsList?.toMutableList()
+                val indexOfNull = mutableListNumber?.indexOf(null)
+                if (operationsList[indexOfNull!!] == "-") {
+                    mutableListNumber[indexOfNull + 1] = mutableListNumber[indexOfNull + 1]?.negate()
+                    mutableListNumber.removeAt(indexOfNull)
+                    operationMutableList[indexOfNull] = ""
+                    return when (startProcessing(mutableListNumber,operationMutableList)) {
+                        null -> {
+                            result = previousResult
+                            numbers[0] = previousResult
+                            CommandResult.Error(CommandResult.DIV_BY_ZERO)
+                        }
+                        else -> CommandResult.Success
+                    }
+                }
                 return when (isCheckingFirstSymbol) {
                     true -> {
                         isCheckingFirstSymbol = false
@@ -123,6 +139,16 @@ class CommandProcessor {
                 }
             }
             isCheckingFirstSymbol = false
+            if (operations.contains("")) {
+                if (numbers.count() > 1) {
+                    while (numbers.count() != 1) {
+                        queue.add(OrderPlusCommand(numbers[0], numbers[1]))
+                        doRoutine(0)
+                    }
+                } else {
+                    operations = mutableListOf()
+                }
+            }
         }
 
     private fun processLastCommand(): CommandProcessor =

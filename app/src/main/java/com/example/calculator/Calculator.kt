@@ -15,7 +15,7 @@ fun main() {
                     }
                     is CommandResult.Success -> {
                         val result = calculator.getResult()
-                        if (result.intValueExact() == 0) {
+                        if ( result.toDouble() == 0.0) {
                             println(0)
                         } else {
                             println(result)
