@@ -1,19 +1,22 @@
 package com.example.calculator
 
+import androidx.core.text.isDigitsOnly
 import java.math.BigDecimal
 
-class Validator {
+object Validator {
     private val regexNumbers = "[^0-9.]".toRegex()
     private val regexOperations = "[^+/*-]".toRegex()
 
     fun validateOperationList(line: String?): List<String>? {
-        return line?.filter { !it.isWhitespace() }
+        return  line?.filter { !it.isWhitespace() }
             ?.replace("*", " * ")
             ?.replace("/", " / ")
             ?.replace("+", " + ")
             ?.replace("-", " - ")
+            ?.replace(".","")
             ?.split(" ")
             ?.filter { it.isNotEmpty() }
+            ?.filter { !it.isDigitsOnly() }
             ?.filter { !it.matches(regexOperations) }
     }
 
