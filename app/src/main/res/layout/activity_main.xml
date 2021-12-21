@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:padding="5dp"
             android:gravity="center">
 
             <Button
@@ -47,6 +48,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn7"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="8"
                 android:background="@color/design_default_color_on_primary"
@@ -55,6 +60,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn8"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="9"
                 android:background="@color/design_default_color_on_primary"
@@ -62,6 +71,10 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:id="@+id/btn9"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:text="/"
@@ -76,6 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:padding="5dp"
             android:gravity="center">
 
             <Button
@@ -86,6 +100,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn4"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="5"
                 android:background="@color/design_default_color_on_primary"
@@ -94,6 +112,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn5"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="6"
                 android:background="@color/design_default_color_on_primary"
@@ -101,6 +123,10 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:id="@+id/btn6"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:text="*"
@@ -115,6 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:padding="5dp"
             android:gravity="center">
 
             <Button
@@ -125,6 +152,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn1"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="2"
                 android:background="@color/design_default_color_on_primary"
@@ -133,6 +164,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn2"/>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="3"
                 android:background="@color/design_default_color_on_primary"
@@ -140,6 +175,10 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:id="@+id/btn3"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:text="-"
@@ -154,6 +193,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:padding="5dp"
             android:gravity="center">
 
             <Button
@@ -164,6 +204,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btnDot"/>
 
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="0"
                 android:background="@color/design_default_color_on_primary"
@@ -172,6 +216,10 @@
                 android:layout_height="match_parent"
                 android:id="@+id/btn0"/>
 
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:text="DEL"
                 android:background="@color/design_default_color_on_primary"
@@ -179,6 +227,10 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:id="@+id/btnDel"/>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:text="+"
@@ -192,16 +244,17 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:padding="5dp"
             android:layout_weight="1">
 
             <Button
-                android:text="="
-                android:background="@color/design_default_color_on_primary"
+                android:id="@+id/btnEqual"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-
-                android:id="@+id/btnEqual"/>
+                android:layout_weight="1"
+                android:background="@color/design_default_color_on_primary"
+                android:text="="
+                android:textSize="34sp" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
