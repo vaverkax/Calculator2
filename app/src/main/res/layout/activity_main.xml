@@ -8,16 +8,15 @@
     android:paddingTop="8dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtInput"
+
+
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#efefef"
-        android:ems="10"
-        android:textAlignment="center"
-        android:textSize="48sp"
+        android:id="@+id/fragmentContainer"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -30,7 +29,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInput"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
         android:gravity="fill">
 
         <TableRow
